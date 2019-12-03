@@ -33,7 +33,7 @@ There are two things you can do about this warning:
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (projectile drag-stuff helm zenburn-theme use-package)))
+    (helm-projectile projectile drag-stuff helm zenburn-theme use-package)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -92,3 +92,11 @@ There are two things you can do about this warning:
   :ensure t
   :bind-keymap
   ("C-c p" . projectile-command-map))
+
+
+;;https://github.com/bbatsov/helm-projectile
+(use-package helm-projectile
+  :after (helm projectile)
+  :ensure t
+  :config
+  (helm-projectile-on))
