@@ -55,3 +55,12 @@ There are two things you can do about this warning:
   :config
   (load-theme 'zenburn t))
 
+
+;; https://github.com/emacs-helm/helm
+(use-package helm
+  :ensure t
+  :bind (("M-x" . helm-M-x)
+	 ("C-x r b" . helm-filtered-bookmarks)
+	 ("C-x C-f" . helm-find-files))
+  :config
+  (helm-mode 1))
