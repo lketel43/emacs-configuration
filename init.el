@@ -31,7 +31,7 @@ There are two things you can do about this warning:
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
- '(package-selected-packages (quote (helm zenburn-theme use-package)))
+ '(package-selected-packages (quote (drag-stuff helm zenburn-theme use-package)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -72,3 +72,14 @@ There are two things you can do about this warning:
 	 ("S-<left>" . windmove-left)
 	 ("S-<down>" . windmove-down)
 	 ("S-<right>" . windmove-right)))
+
+
+;; https://github.com/rejeep/drag-stuff.el
+(use-package drag-stuff
+  :ensure t
+  :bind (("M-<up>" . drag-stuff-up)
+	 ("M-<left>" . drag-stuff-left)
+	 ("M-<down>" . drag-stuff-down)
+	 ("M-<right>" . drag-stuff-right))
+  :config
+  (drag-stuff-global-mode 1))
