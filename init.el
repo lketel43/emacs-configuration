@@ -32,7 +32,8 @@ There are two things you can do about this warning:
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
  '(package-selected-packages (quote (zenburn-theme use-package)))
- '(scroll-bar-mode nil))
+ '(scroll-bar-mode nil)
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
