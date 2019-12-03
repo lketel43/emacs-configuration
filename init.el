@@ -31,7 +31,9 @@ There are two things you can do about this warning:
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
  '(menu-bar-mode nil)
- '(package-selected-packages (quote (drag-stuff helm zenburn-theme use-package)))
+ '(package-selected-packages
+   (quote
+    (projectile drag-stuff helm zenburn-theme use-package)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -83,3 +85,10 @@ There are two things you can do about this warning:
 	 ("M-<right>" . drag-stuff-right))
   :config
   (drag-stuff-global-mode 1))
+
+
+;;https://github.com/bbatsov/projectile
+(use-package projectile
+  :ensure t
+  :bind-keymap
+  ("C-c p" . projectile-command-map))
