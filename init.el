@@ -18,12 +18,23 @@ There are two things you can do about this warning:
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
 
+
 ;;https://github.com/jwiegley/use-package
 (eval-when-compile
   (require 'use-package))
+
+
+;; https://www.emacswiki.org/emacs/LineNumbers
+(use-package display-line-numbers
+  :if (version<= "26.0.50" emacs-version) 
+  :config
+  (global-display-line-numbers-mode) )
+
 
 ;; https://github.com/bbatsov/zenburn-emacs
 (use-package zenburn-theme
   :ensure t
   :config
   (load-theme 'zenburn t))
+
+
