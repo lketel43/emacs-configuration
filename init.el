@@ -33,7 +33,7 @@ There are two things you can do about this warning:
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (helm-projectile projectile drag-stuff helm zenburn-theme use-package)))
+    (treemacs helm-projectile projectile drag-stuff helm zenburn-theme use-package)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -100,3 +100,9 @@ There are two things you can do about this warning:
   :ensure t
   :config
   (helm-projectile-on))
+
+
+;;https://github.com/Alexander-Miller/treemacs
+(use-package treemacs
+  :ensure t
+  :defer t)
