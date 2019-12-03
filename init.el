@@ -21,3 +21,9 @@ There are two things you can do about this warning:
 ;;https://github.com/jwiegley/use-package
 (eval-when-compile
   (require 'use-package))
+
+;; https://github.com/bbatsov/zenburn-emacs
+(use-package zenburn-theme
+  :ensure t
+  :config
+  (load-theme 'zenburn t))
